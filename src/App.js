@@ -1,12 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./App.css";
 import { apiService } from "./apiservice/Apiservice";
 import Story from "./entites/Story";
+import Stories from "./Stories";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      topStory: []
+    };
   }
   componentDidMount() {
     apiService
@@ -22,14 +25,26 @@ class App extends Component {
               return new Story(topStory);
             })
             .then(topStory => {
-              console.log(topStory);
+              this.setState({
+                topStory: [...this.state.topStory, topStory]
+              });
             });
         });
       });
   }
 
   render() {
-    return <h2> Test </h2>;
+    if (this.state.topStory === null) {
+      return <p>Loading...</p>;
+    }
+    console.log(this.state.topStory);
+    return (
+      <Fragment>
+        {this.state.topStory.map((singleTopStory, i) => {
+          return <Stories key={i} singleTopStory={singleTopStory} />;
+        })}
+      </Fragment>
+    );
   }
 }
 
