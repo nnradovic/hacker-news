@@ -8,11 +8,24 @@ class App extends Component {
     this.state = {};
   }
   componentDidMount() {
-    apiService.fetchTopStoriesId();
+    apiService
+      .fetchTopStoriesId()
+      .then(topStoriesID => {
+        return topStoriesID;
+      })
+      .then(topStoriesID => {
+        return topStoriesID.map((topStoryID, i) => {
+          return apiService.fetchSinlgeStory(topStoryID).then(topStory => {
+            console.log(topStory);
+          });
+        });
+      });
   }
 
   render() {
-    return <h2>Test</h2>;
+    console.log(this.state.topStories);
+
+    return <h2> Test </h2>;
   }
 }
 
