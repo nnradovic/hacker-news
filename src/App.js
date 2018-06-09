@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { apiService } from "./apiservice/Apiservice";
+import Story from "./entites/Story";
 
 class App extends Component {
   constructor(props) {
@@ -15,9 +16,14 @@ class App extends Component {
       })
       .then(topStoriesID => {
         return topStoriesID.map((topStoryID, i) => {
-          return apiService.fetchSinlgeStory(topStoryID).then(topStory => {
-            console.log(topStory);
-          });
+          return apiService
+            .fetchSinlgeStory(topStoryID)
+            .then(topStory => {
+              return new Story(topStory);
+            })
+            .then(topStory => {
+              console.log(topStory);
+            });
         });
       });
   }
