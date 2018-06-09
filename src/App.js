@@ -23,8 +23,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.topStories);
-
     return <h2> Test </h2>;
   }
 }
