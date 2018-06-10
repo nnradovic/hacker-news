@@ -1,7 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import Stories from "./Stories";
-import Story from "./entites/Story";
 import StorySingle from "./StorySingle";
 
 const Main = () => {

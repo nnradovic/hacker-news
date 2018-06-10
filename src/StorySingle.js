@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { apiService } from "./apiservice/Apiservice";
 import Story from "./entites/Story";
-import Comments from "./entites/Comments";
 import CommentsList from "./CommentsList";
 
 class StorySingle extends Component {
