@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,QAAS;EACL,OAAO,EAAE,KAAK;EACd,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;EAClB,KAAK,EAAE,IAAI",
+"mappings": "AACA,EAAG;EACC,KAAK,EAFD,KAAK",
 "sources": ["StorySingle.scss"],
 "names": [],
 "file": "StorySingle.css"

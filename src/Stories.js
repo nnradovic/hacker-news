@@ -43,10 +43,7 @@ class Stories extends Component {
         {this.state.topStory.map((singleTopStory, i) => {
           return (
             <div className="col-12 allStory">
-              <StoriesRow
-                key={singleTopStory.id}
-                singleTopStory={singleTopStory}
-              />
+              <StoriesRow key={i} singleTopStory={singleTopStory} />
             </div>
           );
         })}

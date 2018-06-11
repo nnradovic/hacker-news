@@ -6,7 +6,7 @@
   transition: transform 1s; }
   .singleStory h5 {
     font-size: 12px;
-    margin-bottom: 0; }
+    margin-bottom: 5px; }
   .singleStory a {
     color: lightgreen;
     text-decoration-line: none; }
@@ -24,5 +24,17 @@
       color: green; }
     .singleStory:hover span {
       color: black; }
+
+@media (min-width: 768px) {
+  .singleStory h5 {
+    font-size: 16px;
+    margin-bottom: 0; }
+  .singleStory p {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 0; }
+    .singleStory p span {
+      padding: 0 10px;
+      font-weight: lighter; } }
 
 /*# sourceMappingURL=Storiesrow.css.map */

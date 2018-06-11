@@ -31,8 +31,6 @@ class StorySingle extends Component {
           return this.state.story.kids.map((kid, i) => {
             return apiService.fetchComments(kid);
           });
-        } else {
-          return "No Comments";
         }
       })
       .then(x => {
@@ -45,15 +43,16 @@ class StorySingle extends Component {
           comments: y,
           isLoaded: true
         });
+      })
+      .catch(nocomment => {
+        this.setState({
+          comments: "No Comments"
+        });
       });
   }
   render() {
     if (this.state.story === null && this.state.comments === null) {
-      return (
-        <div>
-          <Loading className="loading" />
-        </div>
-      );
+      return <Loading className="loading" />;
     }
     if (this.state.isLoaded) {
       console.log(this.state.comments[0].text);
@@ -62,13 +61,13 @@ class StorySingle extends Component {
       <Fragment>
         <div>
           <h1> {this.state.story.author} </h1>
-          {this.state.isLoaded ? (
+          {this.state.isLoaded && this.state.story.kids.length ? (
             this.state.comments.map((comment, i) => {
               return <CommentsList key={i} comment={comment} />;
             })
           ) : (
             <div>
-              <Loading className="loading" />
+              <p>{this.state.comments}</p>
             </div>
           )}
         </div>

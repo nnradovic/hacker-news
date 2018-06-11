@@ -1,5 +1,6 @@
 img {
   margin: 0 auto;
-  padding: 50px; }
+  display: block;
+  text-align: center; }
 
 /*# sourceMappingURL=Loading.css.map */

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <Fragment>
       <div className="container-fluid header">
-        <h2>Hacker News </h2>
+        <a href="/">Hacker News </a>
       </div>
     </Fragment>
   );

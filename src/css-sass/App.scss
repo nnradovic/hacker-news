@@ -1,5 +1,5 @@
-$mainBackground:rgb(196, 219, 196);
 .app {
+    @import "./_variables.scss";
     background-color: $mainBackground;
     min-height: 100vh;
 }
