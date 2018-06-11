@@ -6,7 +6,7 @@ const CommentsList = ({ comment }) => {
   console.log("====================================");
   return (
     <div>
-      <h1>{comment.text}</h1> <br />
+      <p>{comment.text}</p> <br />
     </div>
   );
 };

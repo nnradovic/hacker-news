@@ -1,14 +1,17 @@
 import React, { Component, Fragment } from "react";
-import "./App.css";
+import "./css-sass/App.css";
 import Main from "./Main";
 
 class App extends Component {
   render() {
     return (
       <Fragment>
-        {/* <Header /> */}
-        <Main />
-        {/* <Footer /> */}
+        <div className="container">
+          <div className="row">
+            {/* <Header /> */}
+            <Main />
+          </div>
+        </div>
       </Fragment>
     );
   }

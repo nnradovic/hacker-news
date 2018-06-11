@@ -41,10 +41,12 @@ class Stories extends Component {
       <Fragment>
         {this.state.topStory.map((singleTopStory, i) => {
           return (
-            <StoriesRow
-              key={singleTopStory.id}
-              singleTopStory={singleTopStory}
-            />
+            <div className="col-12">
+              <StoriesRow
+                key={singleTopStory.id}
+                singleTopStory={singleTopStory}
+              />
+            </div>
           );
         })}
       </Fragment>
