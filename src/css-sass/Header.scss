@@ -1,0 +1,9 @@
+$headerBackground: green;
+$headerFont:lightgreen;
+.container-fluid {
+    background-color: $headerBackground;
+    h2 {
+        text-align: center;
+        color: $headerFont;
+    }
+}
