@@ -8,9 +8,11 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
-        <div className="container">
-          <div className="row">
-            <Main />
+        <div className="container-fluid app">
+          <div className="container">
+            <div className="row">
+              <Main />
+            </div>
           </div>
         </div>
         <Footer />

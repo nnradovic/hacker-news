@@ -2,7 +2,8 @@ import React, { Component, Fragment } from "react";
 import { apiService } from "./apiservice/Apiservice";
 import Story from "./entites/Story";
 import StoriesRow from "./StoriesRow";
-
+import Loading from "./Loading";
+import "./css-sass/Stories.css";
 class Stories extends Component {
   constructor(props) {
     super(props);
@@ -34,14 +35,14 @@ class Stories extends Component {
 
   render() {
     if (this.state.topStory === null) {
-      return <p>Loading...</p>;
+      return <Loading />;
     }
 
     return (
       <Fragment>
         {this.state.topStory.map((singleTopStory, i) => {
           return (
-            <div className="col-12">
+            <div className="col-12 allStory">
               <StoriesRow
                 key={singleTopStory.id}
                 singleTopStory={singleTopStory}

@@ -1,14 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Route } from "react-router-dom";
 import Stories from "./Stories";
 import StorySingle from "./StorySingle";
 
 const Main = () => {
   return (
-    <div>
+    <Fragment>
       <Route exact path="/" component={Stories} />
       <Route path="/singlestory/:id" component={StorySingle} />
-    </div>
+    </Fragment>
   );
 };
 

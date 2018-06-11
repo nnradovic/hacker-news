@@ -1,9 +1,11 @@
 $headerBackground: green;
 $headerFont:lightgreen;
-.container-fluid {
+.header {
     background-color: $headerBackground;
     h2 {
         text-align: center;
         color: $headerFont;
+        margin-bottom: 0;
+        padding: 10px 0;
     }
 }

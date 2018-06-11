@@ -1,1 +1,33 @@
-$headerBackground: rgb(6, 134, 6);
+$singleStory:green;
+$singleStoryHeader:lightgreen;
+.singleStory {
+    border: 1px solid black;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: $singleStory;
+    transition: transform 1s;
+    h5 {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    a {
+        color: $singleStoryHeader;
+        text-decoration-line: none;
+    }
+    p {
+        font-weight: bold;
+        font-size: 10px;
+        margin-bottom: 0;
+        span {
+            padding: 0 5px;
+            font-weight: lighter;
+        }
+    }
+    &:hover {
+        background: $singleStoryHeader;
+        transition: .8s;
+        h5 {
+            color: $singleStory
+        }
+    }
+}

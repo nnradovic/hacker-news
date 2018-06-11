@@ -1,7 +1,9 @@
-.container-fluid {
+.header {
   background-color: green; }
-  .container-fluid h2 {
+  .header h2 {
     text-align: center;
-    color: lightgreen; }
+    color: lightgreen;
+    margin-bottom: 0;
+    padding: 10px 0; }
 
 /*# sourceMappingURL=Header.css.map */

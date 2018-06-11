@@ -1,7 +1,4 @@
-h2 {
-    color: blue;
-}
-
-h2 {
-    padding: 10px;
+$mainBackground:rgb(196, 219, 196);
+.app {
+    background-color: $mainBackground;
 }
