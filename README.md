@@ -13,7 +13,11 @@ Clone this repository on your computer, then go to the directory, type in your t
 - [Reactjs](https://reactjs.org/) - The web framework v16.4.0
 - [Bootstrap](https://getbootstrap.com/) - The web framework v4.1
 - [Sass](https://sass-lang.com/) - For styling
-  Also used lints package, and surge for build live site-example.
+- [Sass]
+
+## Other built in
+
+Also used lints package, and surge for build live site-example.
 
 ## API Hacker News
 
