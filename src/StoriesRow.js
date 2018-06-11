@@ -6,14 +6,16 @@ const StoriesRow = ({ singleTopStory }) => {
   return (
     <Fragment>
       <div className="singleStory">
-        <Link to={`/singlestory/${singleTopStory.id}`} target="_blank">
+        <a href={`${singleTopStory.url}`} target="_blank">
           <h5>{singleTopStory.title}</h5>
-        </Link>
+        </a>
         <div className="asd">
           <p>
             Author {singleTopStory.author}
             <span>Score: {singleTopStory.score}</span>
-            <span>Number of comments: {singleTopStory.descendants}</span>
+            <Link to={`/singlestory/${singleTopStory.id}`}>
+              <span>Number of comments: {singleTopStory.descendants}</span>
+            </Link>
           </p>
         </div>
       </div>

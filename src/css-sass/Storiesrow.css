@@ -22,5 +22,7 @@
     transition: .8s; }
     .singleStory:hover h5 {
       color: green; }
+    .singleStory:hover span {
+      color: black; }
 
 /*# sourceMappingURL=Storiesrow.css.map */

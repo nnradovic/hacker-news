@@ -8,6 +8,7 @@ const Main = () => {
     <Fragment>
       <Route exact path="/" component={Stories} />
       <Route path="/singlestory/:id" component={StorySingle} />
+      <Route path="url" />
     </Fragment>
   );
 };

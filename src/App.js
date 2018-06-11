@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import "./css-sass/App.css";
 import Main from "./Main";
 import Header from "./partials/Header";
-import Footer from "./partials/Footer";
+
 class App extends Component {
   render() {
     return (
@@ -15,7 +15,6 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <Footer />
       </Fragment>
     );
   }

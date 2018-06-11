@@ -34,7 +34,7 @@ class Stories extends Component {
   }
 
   render() {
-    if (this.state.topStory === null) {
+    if (this.state.topStory == null) {
       return <Loading />;
     }
 

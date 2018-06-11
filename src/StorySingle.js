@@ -3,6 +3,7 @@ import { apiService } from "./apiservice/Apiservice";
 import Story from "./entites/Story";
 import CommentsList from "./CommentsList";
 import Loading from "./Loading";
+import "../src/css-sass/StorySingle.css";
 
 class StorySingle extends Component {
   constructor(props) {
@@ -48,21 +49,29 @@ class StorySingle extends Component {
   }
   render() {
     if (this.state.story === null && this.state.comments === null) {
-      return <Loading />;
+      return (
+        <div>
+          <Loading className="loading" />
+        </div>
+      );
     }
     if (this.state.isLoaded) {
       console.log(this.state.comments[0].text);
     }
     return (
       <Fragment>
-        <h1> {this.state.story.author} </h1>
-        {this.state.isLoaded ? (
-          this.state.comments.map((comment, i) => {
-            return <CommentsList key={i} comment={comment} />;
-          })
-        ) : (
-          <Loading />
-        )}
+        <div>
+          <h1> {this.state.story.author} </h1>
+          {this.state.isLoaded ? (
+            this.state.comments.map((comment, i) => {
+              return <CommentsList key={i} comment={comment} />;
+            })
+          ) : (
+            <div>
+              <Loading className="loading" />
+            </div>
+          )}
+        </div>
       </Fragment>
     );
   }
